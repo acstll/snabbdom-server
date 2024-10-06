@@ -1,6 +1,4 @@
 
-var forOwn = require('lodash.forown')
-
 // data.class
 
 module.exports = function classModule (vnode, attributes) {
@@ -11,7 +9,7 @@ module.exports = function classModule (vnode, attributes) {
   var existing = attributes.get('class')
   existing = existing.length > 0 ? existing.split(' ') : []
 
-  forOwn(classes, function (value, key) {
+  Object.entries(classes).forEach(function ([key, value]) {
     if (value) {
       _add.push(key)
     } else {

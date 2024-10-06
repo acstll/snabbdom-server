@@ -1,5 +1,4 @@
 
-var forOwn = require('lodash.forown')
 var escape = require('lodash.escape')
 
 // data.attrs
@@ -7,7 +6,7 @@ var escape = require('lodash.escape')
 module.exports = function attrsModule (vnode, attributes) {
   var attrs = vnode.data.attrs || {}
 
-  forOwn(attrs, function (value, key) {
+  Object.entries(attrs).forEach(function ([key, value]) {
     attributes.set(key, escape(value))
   })
 }

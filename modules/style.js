@@ -1,6 +1,5 @@
 
 var assign = require('object-assign')
-var forOwn = require('lodash.forown')
 var escape = require('lodash.escape')
 var kebabCase = require('lodash.kebabcase')
 
@@ -15,7 +14,7 @@ module.exports = function styleModule (vnode, attributes) {
     assign(style, style.delayed)
   }
 
-  forOwn(style, function (value, key) {
+  Object.entries(style).forEach(function ([key, value]) {
     // omit hook objects
     if (typeof value === 'string' || typeof value === 'number') {
       var kebabKey = kebabCase(key)
