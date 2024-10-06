@@ -1,5 +1,5 @@
 
-var escape = require('lodash.escape')
+var escape = require('../util/escape')
 
 // data.attrs
 

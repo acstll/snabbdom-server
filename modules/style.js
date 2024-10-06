@@ -1,6 +1,6 @@
 
 var assign = require('object-assign')
-var escape = require('lodash.escape')
+var escape = require('../util/escape')
 var kebabCase = require('lodash.kebabcase')
 
 // data.style

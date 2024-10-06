@@ -1,5 +1,5 @@
 
-var escape = require('lodash.escape')
+var escape = require('../util/escape')
 
 // https://developer.mozilla.org/en-US/docs/Web/API/element
 var omit = [
