@@ -1,6 +1,5 @@
 
-var forOwn = require('lodash.forown')
-var escape = require('lodash.escape')
+var escape = require('../util/escape')
 
 // https://developer.mozilla.org/en-US/docs/Web/API/element
 var omit = [
@@ -71,7 +70,7 @@ var booleanAttributes = [
 module.exports = function propsModule (vnode, attributes) {
   var props = vnode.data.props || {}
 
-  forOwn(props, function (value, key) {
+  Object.entries(props).forEach(function ([key, value]) {
     if (omit.indexOf(key) > -1) {
       return
     }

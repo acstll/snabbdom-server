@@ -1,5 +1,5 @@
 
-var escape = require('lodash.escape')
+var escape = require('./util/escape')
 var parseSelector = require('parse-sel')
 var VOID_ELEMENTS = require('./elements').VOID
 var CONTAINER_ELEMENTS = require('./elements').CONTAINER
