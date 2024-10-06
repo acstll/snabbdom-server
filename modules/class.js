@@ -18,7 +18,7 @@ module.exports = function classModule (vnode, attributes) {
   })
 
   values = [...new Set(existing.concat(_add))]
-    .filter(value => _remove.indexOf(value) < 0)
+    .filter(function (value) { return _remove.indexOf(value) < 0 })
 
   if (values.length) {
     attributes.set('class', values.join(' '))
