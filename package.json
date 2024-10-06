@@ -29,8 +29,6 @@
     "lodash.escape": "^4.0.1",
     "lodash.forown": "^4.4.0",
     "lodash.kebabcase": "^4.1.1",
-    "lodash.remove": "^4.7.0",
-    "lodash.uniq": "^4.5.0",
     "object-assign": "^4.1.0",
     "parse-sel": "^1.0.0"
   },

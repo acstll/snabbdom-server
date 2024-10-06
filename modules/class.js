@@ -1,7 +1,5 @@
 
 var forOwn = require('lodash.forown')
-var remove = require('lodash.remove')
-var uniq = require('lodash.uniq')
 
 // data.class
 
@@ -21,9 +19,8 @@ module.exports = function classModule (vnode, attributes) {
     }
   })
 
-  values = remove(uniq(existing.concat(_add)), function (value) {
-    return _remove.indexOf(value) < 0
-  })
+  values = [...new Set(existing.concat(_add))]
+    .filter(value => _remove.indexOf(value) < 0)
 
   if (values.length) {
     attributes.set('class', values.join(' '))
